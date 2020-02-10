@@ -3,6 +3,8 @@
 dnf install nfs-utils -y
 dracut -f -v
 
+dnf install epel-release -y
+
 dnf install borgbackup -y
 
 dnf install python3 -y
