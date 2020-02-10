@@ -1,6 +1,8 @@
 #!/bin/bash
 
-apt install nfs-kernel-server -y
+dnf install nfs-utils -y
+
+dracut -f -v
 
 mkdir /backup
 
@@ -9,11 +11,13 @@ read ip_client
 
 echo "$ip_client client">>/etc/hosts
 
-echo "/backup client(rw,no_root_squash)">>/etc/exports
+echo "/backup client(rw,no_root_squash) \ *.local.domain.edu(rw,no_root_squash)">>/etc/exports
 
-service nfs-kernel-server reload
 
-service nfs-kernel-server restart
+systemctl enable rpcbind
+systemctl enable nfs-server
+systemctl start rpcbind
+systemctl start nfs-server
 
 touch auto.sh
 chmod +x auto.sh
