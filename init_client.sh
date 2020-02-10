@@ -3,11 +3,11 @@
 dnf install nfs-utils -y
 dracut -f -v
 
-apt-get install borgbackup -y
+dnf install borgbackup -y
 
-apt install python3-pip -y
+dnf install python3 -y
 
-apt-get install python3-tk -y
+dnf install python3-tkinter -y
 
 systemctl enable rpcbind
 systemctl start rpcbind
