@@ -7,10 +7,6 @@ dnf install epel-release -y
 
 dnf install borgbackup -y
 
-dnf install python3 -y
-
-dnf install python3-tkinter -y
-
 systemctl enable rpcbind
 systemctl start rpcbind
 
