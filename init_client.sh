@@ -15,14 +15,14 @@ chmod +wxr Backup.py
 
 echo "192.168.56.100 serveurnfs">>/etc/hosts
 
-mkdir /backup
+mkdir /srv/backup
 
-mount serveurnfs:/backup /backup
+mount serveurnfs:/srv/backup /srv/backup
 
 touch auto.sh
 chmod +x auto.sh
 
-echo "serveurnfs:/backup /backup nfs defaults,user,auto,noatime,bg 0 0">>/etc/fstab
+echo "serveurnfs:/srv/backup /srv/backup nfs defaults,user,auto,noatime,bg 0 0">>/etc/fstab
 
 echo "yes | /srv/backup_centos8/backup.sh save sauvegardeJournaliere_`date "+\%d.\%m.\%Y"` /home">>/srv/backup_centos8/auto.sh
 
