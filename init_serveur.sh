@@ -10,7 +10,7 @@ mkdir saveBackup
 
 mount --bind /srv/backup /srv/backup
 
-echo "/srv/backup /srv/backups  none   bind   0   0">>/etc/fstab
+echo "/srv/backup /srv/backup  none   bind   0   0">>/etc/fstab
 
 echo "192.168.56.111 client-1">>/etc/hosts
 echo "192.168.56.112 client-2">>/etc/hosts
