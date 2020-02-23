@@ -1,6 +1,6 @@
 # Documentation d'utilisation
 
-Ces scripts sont fait pour être utlisés sous Ubuntu.  
+Ces scripts sont fait pour être utlisés sous centos8.  
 
 Ils permettent de créer et gérer des backups des arborescences que vous souhaitez ainsi que de les sauvegarder sur un serveur.
 Cela inclus une sauvegarde automatique tous les jours du dossier de votre choix ainsi qu'une copie des backups tous les jours sur un autre dossier du serveur pour plus de sécurité.
