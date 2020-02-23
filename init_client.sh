@@ -1,19 +1,15 @@
 #!/bin/bash
 
-dnf install nfs-utils -y
-dracut -f -v
-
-dnf install epel-release -y
+dnf install nfs-common -y
 
 dnf install borgbackup -y
-
-systemctl enable rpcbind
-systemctl start rpcbind
 
 chmod +x backup.sh
 chmod +wxr Backup.py
 
 echo "192.168.56.100 serveurnfs">>/etc/hosts
+
+showmount -e serveurnfs
 
 mkdir /srv/backup
 
