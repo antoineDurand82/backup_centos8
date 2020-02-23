@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dnf install nfs-common -y
+dnf install nfs-utils -y
 
 dnf install borgbackup -y
 
