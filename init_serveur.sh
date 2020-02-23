@@ -8,6 +8,11 @@ cd /srv/
 mkdir backup
 mkdir saveBackup
 
+systemctl enable rpcbind
+systemctl enable --now nfs-server
+systemctl start rpcbind
+systemctl start nfs-server
+
 mount --bind /srv/backup /srv/backup
 
 echo "/srv/backup /srv/backup  none   bind   0   0">>/etc/fstab
@@ -20,10 +25,7 @@ echo "/srv/backup client-2(rw,no_root_squash) \ *.local.domain.edu(rw,no_root_sq
 
 exportfs -rav
 
-systemctl enable rpcbind
-systemctl enable --now nfs-server
-systemctl start rpcbind
-systemctl start nfs-server
+
 
 touch auto.sh
 chmod +x auto.sh
