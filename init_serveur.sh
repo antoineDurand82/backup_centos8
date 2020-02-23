@@ -19,7 +19,7 @@ echo "/srv/backup client-1(rw,no_root_squash) \ *.local.domain.edu(rw,no_root_sq
 echo "/srv/backup client-2(rw,no_root_squash) \ *.local.domain.edu(rw,no_root_squash)">>/etc/exports
 
 exportfs -ra
-
+exportfs -v
 
 systemctl enable rpcbind
 systemctl enable --now nfs-server
