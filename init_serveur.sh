@@ -25,6 +25,6 @@ chmod +x auto.sh
 
 echo "sudo cp -r /srv/backup /srv/saveBackup">>/srv/backup_centos8/auto.sh
 
-mv /srv/saveBackup/auto.sh /etc/cron.daily/
+mv /srv/backup_centos8/auto.sh /etc/cron.daily/
 
 echo -e "\n\nL'installion est terminée, bravo"
