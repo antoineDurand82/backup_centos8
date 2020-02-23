@@ -29,7 +29,7 @@ systemctl start nfs-server
 touch auto.sh
 chmod +x auto.sh
 
-echo "sudo cp -r /srv/backup /srv/saveBackup">>/srv/backup_centos8/auto.sh
+echo "sudo su - cp -r /srv/backup /srv/saveBackup">>/srv/backup_centos8/auto.sh
 
 mv /srv/backup_centos8/auto.sh /etc/cron.daily/
 
