@@ -9,6 +9,7 @@ chmod +wxr Backup.py
 
 echo "192.168.56.100 serveurnfs">>/etc/hosts
 
+mount -t nfs -o vers=4 serveurnfs:/srv/backup /srv/backup
 showmount -e serveurnfs
 
 mkdir /srv/backup
