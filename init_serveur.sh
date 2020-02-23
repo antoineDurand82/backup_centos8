@@ -16,7 +16,7 @@ echo "/srv/backup client-2(rw,no_root_squash) \ *.local.domain.edu(rw,no_root_sq
 
 
 systemctl enable rpcbind
-systemctl enable nfs-server
+systemctl enable --now nfs-server
 systemctl start rpcbind
 systemctl start nfs-server
 
