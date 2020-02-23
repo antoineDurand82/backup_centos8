@@ -5,8 +5,8 @@ dnf install nfs-utils -y
 dracut -f -v
 
 cd /srv/
-mkdir /backup
-mkdir /saveBackup
+mkdir backup
+mkdir saveBackup
 
 echo "192.168.56.111 client-1">>/etc/hosts
 echo "192.168.56.112 client-2">>/etc/hosts
