@@ -20,8 +20,8 @@ echo "/srv/backup /srv/backup  none   bind   0   0">>/etc/fstab
 echo "192.168.56.111 client-1">>/etc/hosts
 echo "192.168.56.112 client-2">>/etc/hosts
 
-echo "/srv/backup client-1(rw,no_root_squash) \ *.local.domain.edu(rw,no_root_squash)">>/etc/exports
-echo "/srv/backup client-2(rw,no_root_squash) \ *.local.domain.edu(rw,no_root_squash)">>/etc/exports
+echo "/srv/backup client-1(rw,no_root_squash)">>/etc/exports
+echo "/srv/backup client-2(rw,no_root_squash)">>/etc/exports
 
 exportfs -rav
 
